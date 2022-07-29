@@ -1,0 +1,31 @@
+{
+  "name": "mini-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "sass  --no-source-map src/assets/scss:src/assets/css",
+    "copy": "npm-run-all --parallel",
+    "watch:sass": "sass  --no-source-map --watch src/assets/scss:src/assets/css",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server src --files src",
+    "start": "npm-run-all copy --parallel watch serve",
+    "build": "npm-run-all build:*"
+  },
+  "keywords": [],
+  "author": "Scott",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.27.7",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^5.0.17",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^10.0.0",
+    "postcss-csso": "^6.0.0",
+    "postcss-import": "^14.1.0",
+    "postcss-media-minmax": "^5.0.0",
+    "sass": "^1.49.8"
+  }
+}

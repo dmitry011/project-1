@@ -1,0 +1,227 @@
+.menu {
+
+    // .menu__item
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    // .menu__link
+
+    &__link {
+        flex: 1 1 auto;
+        max-width: min-content;
+        transition: color .25s ease;
+    }
+
+    // .menu__sub-link
+
+    &__sub-link {
+        transition: color .25s ease;
+
+        &:hover {
+            color: var(--black);
+        }
+    }
+
+    &__link,
+    &__sub-link {
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 1.14;
+        color: var(--medium-grey);
+    }
+
+    // .menu__arrow
+
+    &__arrow {
+        display: block;
+        margin-left: 9px;
+        transition: transform .25s ease, stroke .25s ease;
+        stroke: var(--medium-grey);
+    }
+
+    // .menu__sub-list 
+
+    &__sub-list {
+        padding: 24px;
+    }
+
+    // .menu__sub-item
+
+    &__sub-item {
+        @include mb(16);
+    }
+
+    // .menu__sub-link
+
+    &__sub-link {
+        position: relative;
+        white-space: nowrap;
+
+        &--1,
+        &--2,
+        &--3,
+        &--4 {
+            padding-left: 29px;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 14px;
+                height: 16px;
+            }
+        }
+
+        &--1 {
+            &::before {
+                content: url('../img/header/icon-1.svg');
+            }
+        }
+
+        &--2 {
+            &::before {
+                content: url('../img/header/icon-2.svg');
+            }
+        }
+
+        &--3 {
+            &::before {
+                content: url('../img/header/icon-3.svg');
+            }
+        }
+
+        &--4 {
+            &::before {
+                content: url('../img/header/icon-4.svg');
+            }
+        }
+    }
+}
+
+.body-pc {
+
+    .menu {
+        &__item {
+            &:hover {
+                .menu__link {
+                    color: var(--black);
+                }
+
+                .menu__arrow {
+                    stroke: var(--black);
+                    transform: rotate(-180deg);
+                }
+
+                .menu__sub-list {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+}
+
+.body-mobile {
+
+    .menu {
+        &__item {
+            &--open {
+                .menu__link {
+                    color: var(--black);
+                }
+
+                .menu__arrow {
+                    stroke: var(--black);
+                    transform: rotate(-180deg);
+                }
+
+                .menu__sub-list {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+}
+
+
+@include min-small-tablet {
+    .menu {
+
+        &__list {
+            display: flex;
+            align-items: center;
+        }
+
+        &__item {
+            @include mr(40);
+            padding: 20px 0;
+        }
+
+        &__sub-list {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            border-radius: 10px;
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+            background-color: var(--pure-white);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity .35s ease-in;
+        }
+    }
+}
+
+@include small-tablet {
+    .menu {
+        &__list {
+            margin-bottom: 32px;
+        }
+
+        &__item {
+            flex-wrap: wrap;
+            @include mb(16);
+        }
+
+        &__link {
+            font-size: rem(16);
+            line-height: 1.62;
+        }
+
+        &__arrow {
+            margin-left: 16px;
+        }
+
+        &__sub-link {
+            font-size: rem(16);
+            line-height: 1.62;
+        }
+
+        &__sub-list {
+            position: relative;
+            display: none;
+            flex: 1 1 100%;
+        }
+    }
+
+    .body-mobile {
+
+        .menu {
+            &__item {
+                &--open {
+                    .menu__sub-list {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

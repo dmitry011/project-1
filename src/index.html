@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ffffff">
+    <title>snap</title>
+    <link rel="preload" href="assets/fonts/Epilogue/Epilogue-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Epilogue/Epilogue-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Epilogue/Epilogue-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/script.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        <header class="header">
+            <div class="header__container">
+                <a class="header__logo logo" href="#">snap</a>
+                <button class="header__button" type="menu" aria-expanded="false">
+                    <span></span>
+                </button>
+                <div class="header__body">
+                    <nav class="header__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Features</a>
+                                <svg class="menu__arrow" width="9" height="7" viewBox="0 0 9 7" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke-width="1.5" />
+                                </svg>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item">
+                                        <a class="menu__sub-link menu__sub-link--1" href="#">Todo List</a>
+                                    </li>
+                                    <li class="menu__sub-item">
+                                        <a class="menu__sub-link menu__sub-link--2" href="#">Calendar</a>
+                                    </li>
+                                    <li class="menu__sub-item">
+                                        <a class="menu__sub-link menu__sub-link--3" href="#">Reminders</a>
+                                    </li>
+                                    <li class="menu__sub-item">
+                                        <a class="menu__sub-link menu__sub-link--4" href="#">Planning</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Company</a>
+                                <svg class="menu__arrow" width="9" height="7" viewBox="0 0 9 7" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke-width="1.5" />
+                                </svg>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item">
+                                        <a class="menu__sub-link" href="#">History</a>
+                                    </li>
+                                    <li class="menu__sub-item">
+                                        <a class="menu__sub-link" href="#">Our Team</a>
+                                    </li>
+                                    <li class="menu__sub-item">
+                                        <a class="menu__sub-link" href="#">Blog</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Careers</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">About</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__account account">
+                        <button class="account__login" type="button">Login</button>
+                        <button class="account__register button" type="button">Register</button>
+                    </div>
+                </div>
+                <div class="header__cover-space"></div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="hero__container container">
+                <div class="hero__body">
+                    <h1 class="hero__title">
+                        Make remote work
+                    </h1>
+                    <div class="hero__descr">
+                        Get your team in sync, no matter your location. Streamline processes, create team rituals, and
+                        watch productivity soar.
+                    </div>
+                    <button class="hero__button button" type="button">Learn more</button>
+                    <div class="hero__companies">
+                        <a class="hero__companies-link" href="#">
+                            <img class="hero__companies-img" src="assets/img/hero/companies/01.svg"
+                                alt="Logo of databiz company">
+                        </a>
+                        <a class="hero__companies-link" href="#">
+                            <img class="hero__companies-img" src="assets/img/hero/companies/02.svg"
+                                alt="Logo of audio phile company">
+                        </a>
+                        <a class="hero__companies-link" href="#">
+                            <img class="hero__companies-img" src="assets/img/hero/companies/03.svg"
+                                alt="Logo of meet company">
+                        </a>
+                        <a class="hero__companies-link" href="#">
+                            <img class="hero__companies-img" src="assets/img/hero/companies/04.svg"
+                                alt="Logo of maker company">
+                        </a>
+                    </div>
+                </div>
+                <picture class="hero__picture">
+                    <source srcset="assets/img/hero/content-img-square.svg" media="(min-width: 769px)">
+                    <img src="assets/img/hero/content-img-wide.svg" alt="" aria-hidden="true">
+                </picture>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

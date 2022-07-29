@@ -1,0 +1,13 @@
+.logo {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1;
+    letter-spacing: -0.486111px;
+    color: var(--black);
+}
+
+@include small-tablet {
+    .logo {
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,13 @@
+// basic connections
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// connecting page components
+@import "components/header";
+@import "components/logo";
+@import "components/menu";
+@import "components/button";
+@import "components/account";
+@import "components/hero";

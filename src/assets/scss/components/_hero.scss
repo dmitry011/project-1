@@ -1,0 +1,158 @@
+.hero {
+    padding-top: 130px;
+    margin-bottom: 30px;
+
+    // .hero__container
+
+    &__container {
+        @include flex-all-sb;
+    }
+
+    // .hero__body
+
+    &__body {
+        max-width: 530px;
+    }
+
+    // .hero__title
+
+    &__title {
+        margin-bottom: 48px;
+        font-weight: 700;
+        font-size: rem(80);
+        line-height: 1;
+        letter-spacing: -1.11111px;
+        color: var(--black);
+    }
+
+    // .hero__descr
+
+    &__descr {
+        margin-bottom: 51px;
+        max-width: 445px;
+        font-weight: 500;
+        font-size: rem(18);
+        line-height: 1.56;
+        color: var(--medium-grey);
+    }
+
+    // .hero__button
+
+    &__button {
+        margin-bottom: 108px;
+        padding: 14px 29px;
+        border: 1px solid var(--black);
+        font-weight: 700;
+        font-size: rem(18);
+        line-height: 1.56;
+        letter-spacing: -0.25px;
+        color: var(--almost-white);
+        background-color: var(--black);
+        transition: background-color .35s ease, color .35s ease;
+
+        &:hover {
+            color: var(--black);
+            background-color: transparent;
+        }
+    }
+
+    // .hero__companies
+
+    &__companies {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        column-gap: 40px;
+    }
+
+    // .hero__companies-link
+
+    &__companies-img {
+        transition: opacity .15s ease-in;
+
+        &:hover {
+            opacity: .65;
+        }
+    }
+}
+
+
+@include desktop {
+    .hero {
+
+        &__container {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+
+        &__body {
+            display: grid;
+            place-items: center;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        &__descr {
+            max-width: 100%;
+        }
+
+        &__button {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+@include small-tablet {
+    .hero {
+        padding-top: 70px;
+
+        &__body {
+            margin-top: 30px;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+            font-size: rem(50);
+        }
+
+        &__descr {
+            margin-bottom: 25px;
+        }
+
+        &__button {
+            margin-bottom: 48px;
+        }
+    }
+}
+
+@include mobile {
+    .hero {
+        &__container {
+            padding: 0;
+        }
+
+        &__body {
+            padding: 0 var(--container-offset);
+        }
+
+        &__title {
+            margin-bottom: 16px;
+            font-size: rem(36);
+            line-height: 1.17;
+            letter-spacing: -0.5px;
+        }
+
+        &__descr {
+            font-size: rem(16);
+            line-height: 1.62;
+        }
+
+        &__button {
+            padding: 11px 22px;
+        }
+
+        &__companies {
+            column-gap: 28px;
+        }
+    }
+}
